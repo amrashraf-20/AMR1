@@ -1,0 +1,13 @@
+# AI & Vision subsystem — AMR1
+# Minimal set: only what vision.py / vision_autopilot.py / visual_servo.py import.
+#
+# NOTE: torch is deliberately NOT pinned to a CUDA build here. `pip install
+# ultralytics` pulls torch from PyPI (CPU build) which is fine for inference on
+# small frames. If you want GPU, install torch first from the CUDA index:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu128
+#   pip install -r requirements.txt
+
+ultralytics>=8.3.0        # YOLO detection (yolov8n by default)
+opencv-python>=4.9.0      # frame enhancement, CLAHE, drawing
+numpy>=1.24               # array plumbing in the pipeline
+torch>=2.0                # pulled by ultralytics anyway; pinned for clarity

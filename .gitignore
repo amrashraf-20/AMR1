@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Weights / models
+*.pt
+*.onnx
+*.engine
+
+# Secrets — never commit these
+.env
+.env.*
+!.env.example
+secrets.h
+certs/
+*.pem
+*.key
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
